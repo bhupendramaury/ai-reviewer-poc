@@ -37,11 +37,9 @@ function getUser(query) {
 // Blocking CPU operation
 app.get("/heavy", (req, res) => {
   let total = 0;
-
   for (let i = 0; i < 10000000000; i++) {
     total += i;
   }
-
   res.send(total.toString());
 });
 

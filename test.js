@@ -94,6 +94,7 @@ app.get("/crash", (req, res) => {
   const obj = null;
   console.log(obj.name);
   res.send("done");
+  
 });
 
 // Insecure file access
@@ -101,6 +102,7 @@ app.get("/read-file", (req, res) => {
   const file = req.query.file;
 
   fs.readFile(file, "utf8", (err, data) => {
+    
     if (err) {
       res.send(err.message);
     } else {
